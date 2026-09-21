@@ -23,3 +23,4 @@ sentence-transformers
 
 pip install -r requirements.txt
 
+to run this app: streamlit run app.py
