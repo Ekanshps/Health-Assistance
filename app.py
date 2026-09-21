@@ -35,4 +35,11 @@ tdee=tdee_calculator(bmr,activity)
 
 calories=calorie_target(tdee,aim)
 
+##---------------------------------------------------------##
 
+col1,col2,col3,col4=st.columns(4)
+
+col1.metric("BMI",bmi)
+col2.metric("BMR",f"{bmr} Kacl")
+col3.metric("TDEE",f"{tdee} Kacl")
+col4.metric("CALORIE TARGET",f"{calories} Kacl")
