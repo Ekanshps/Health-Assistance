@@ -1,5 +1,7 @@
 import streamlit as st
 import os
+from diet import bmi_calculator, bmr_calculator, tdee_calculator, calorie_target
+
 
 # st.set_page_config(page_title="Health Assistance",
 #               page_icon="💪",
@@ -13,7 +15,24 @@ st.header("Health Information")
 
 st.sidebar.header("Your Information 🤷‍♀️")
 
-gender=st.sidebar.selectbox("Gender",["Male","Female"])
+##-------------------------------Controls Sidebar------------------------------------##
+
+gender=st.sidebar.selectbox("Gender",["MALE","FEMALE"])
 weight=st.sidebar.number_input("Weight(Kg)",1,120)
 height=st.sidebar.number_input("Height(cm)",100,200)
+activity=st.sidebar.selectbox("Activity",[ "Sedentary","Modrately Active","Very Active","Extra Active"])
+aim=st.sidebar.selectbox("Aim",["weight maintain","weight loss","weight gain"])
+age=st.sidebar.number_input("Age",1,100)
+
+##---------------------------Calculation Starts Here ----------------------------##
+
+
+bmi=bmi_calculator(weight,height)
+
+bmr=bmr_calculator(gender,age,weight,height)
+
+tdee=tdee_calculator(bmr,activity)
+
+calories=calorie_target(tdee,aim)
+
 
