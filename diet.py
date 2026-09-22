@@ -5,11 +5,11 @@ def bmi_calculator(weight,height):
 def bmr_calculator(gender,age,weight,height):
     if gender=="MALE":
         bmr=(10*weight)+(6.25*height)-(5*age)+5
-        return bmr
+        return round(bmr,2)
 
     elif gender=="FEMALE":
         bmr=(10*weight)+(6.25*height)-(5*age)-161
-        return bmr
+        return round(bmr,2)
 
 def tdee_calculator(bmr,activity):
     activity_factor={

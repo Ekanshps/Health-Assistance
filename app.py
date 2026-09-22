@@ -3,9 +3,9 @@ import os
 from diet import bmi_calculator, bmr_calculator, tdee_calculator, calorie_target
 
 
-# st.set_page_config(page_title="Health Assistance",
-#               page_icon="💪",
-#               layout="wide")
+st.set_page_config(page_title="AI Health Assistance",
+              page_icon="💪",
+              layout="wide")
 
 st.title("AI Health Assistance 💪")
 
@@ -40,6 +40,8 @@ calories=calorie_target(tdee,aim)
 col1,col2,col3,col4=st.columns(4)
 
 col1.metric("BMI",bmi)
-col2.metric("BMR",f"{bmr} Kacl")
-col3.metric("TDEE",f"{tdee} Kacl")
-col4.metric("CALORIE TARGET",f"{calories} Kacl")
+col2.metric("BMR",f"{bmr} kacl")
+col3.metric("TDEE",f"{tdee} kacl")
+col4.metric("CALORIE TARGET",f"{calories} kacl")
+
+
