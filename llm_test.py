@@ -14,5 +14,5 @@ responce=client.chat.completions.create(model="openai/gpt-oss-120b",
                                    "content":"What Is good source of Protien in Vegeterian."
                                }])
 
-answer=responce.choices[0].messsage.content
+answer=responce.choices[0].message.content
 print(answer)
