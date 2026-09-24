@@ -154,15 +154,13 @@ This project is for **educational and general wellness purposes only**. It does 
 - [ ] Add conversational memory to the Health Assistance chatbot
 - [ ] Expand the nutrition knowledge base with more sources
 - [ ] Support multi-day meal plans
-- [ ] Add automated tests for the calculator functions
-- [ ] More granular error handling (replace broad exception catches)
 
 ---
 
 ## 👤 Author
 
 **Ekansh Pratap Singh**
-MCA Student · Full-Stack & Applied AI Developer · Lucknow, India
+MCA Graduate · Full-Stack & Applied AI Developer · Lucknow, India
 
 - 🌐 Portfolio: [epsingh.in](https://epsingh.in)
 - 💻 GitHub: [@Ekanshps](https://github.com/Ekanshps)
