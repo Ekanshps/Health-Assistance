@@ -67,7 +67,7 @@ col4.metric("CALORIE TARGET",f"{calories} kacl")
 
 tab1,tab2=st.tabs(['Diet Recommendation','Health Assistance'])
 
-if tab1:
+with tab1:
     if st.button("Recommend Diet"):
         if client:
             with st.spinner("Creating Diet..."):
@@ -233,8 +233,8 @@ IMPORTANT RULES:
                     st.error("RAG is Not Connected..")
 
 
-if tab2:
-    question=st.text_area("Ask About Healt",
+with tab2:
+    question=st.text_area("Ask About Health",
                           placeholder="eg: Good Source Of Vegeterian Protein")
     if st.button("Ask AI"):
         db=load_rag()
@@ -314,3 +314,4 @@ and wellness purposes.
                                                 
         answer=responce.choices[0].message.content
         st.markdown(answer)
+st.warning("Knowledge-based health information tools serve as guides, but they cannot replace a physical examination or professional medical diagnosis")
